@@ -1,0 +1,29 @@
+{
+    "deviceTemplateList": [
+        {
+            "templateId": "$stud_templateId",
+            "device": [
+                {
+                    "csv-status": "complete",
+                    "csv-deviceId": "$vedge_uuid",
+                    "csv-deviceIP": "10.1.61.2$stud_num",
+                    "csv-host-name": "s$stud_numb3-vEdge",
+                    "//system/host-name": "s$stud_numb3-vEdge",
+                    "//system/system-ip": "10.1.61.2$stud_num",
+                    "//system/site-id": "2$stud_num",
+                    "/0/vpn-instance/ip/route/0.0.0.0/0/next-hop/vpn0_ge0/0_default_route_next_hop/address": "11.11.11.1",
+                    "/0/vpn-instance/ip/route/0.0.0.0/0/next-hop/vpn0_ge0/1_default_route_next_hop/address": "12.12.12.1",
+                    "/0/ge0/0/interface/description": "mpls",
+                    "/0/ge0/0/interface/ip/address": "192.168.15.2$stud_num/24",
+                    "/0/ge0/0/interface/tunnel-interface/color/value": "mpls",
+                    "/0/ge0/1/interface/description": "inet2",
+                    "/0/ge0/1/interface/ip/address": "12.12.12.2$stud_num/24",
+                    "/0/ge0/1/interface/tunnel-interface/color/value": "public-internet",
+                    "/512/eth0/interface/ip/address": "10.1.61.2$stud_num/23",
+                    "/100/ge0/2/interface/ip/address": "10.1.2$stud_num.1/24",
+                    "csv-templateId": "$stud_templateId"
+                }
+            ]
+        }
+    ]
+}

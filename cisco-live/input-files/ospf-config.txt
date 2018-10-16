@@ -1,0 +1,240 @@
+
+interface GigabitEthernet2.101
+ encapsulation dot1Q 101
+ ip address 10.1.101.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 101
+ network 10.1.101.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.102
+ encapsulation dot1Q 102
+ ip address 10.1.102.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 102
+ network 10.1.102.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.103
+ encapsulation dot1Q 103
+ ip address 10.1.103.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 103
+ network 10.1.103.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.104
+ encapsulation dot1Q 104
+ ip address 10.1.104.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 104
+ network 10.1.104.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.105
+ encapsulation dot1Q 105
+ ip address 10.1.105.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 105
+ network 10.1.105.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.106
+ encapsulation dot1Q 106
+ ip address 10.1.106.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 106
+ network 10.1.106.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.107
+ encapsulation dot1Q 107
+ ip address 10.1.107.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 107
+ network 10.1.107.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.108
+ encapsulation dot1Q 108
+ ip address 10.1.108.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 108
+ network 10.1.108.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.109
+ encapsulation dot1Q 109
+ ip address 10.1.109.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 109
+ network 10.1.109.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.110
+ encapsulation dot1Q 110
+ ip address 10.1.110.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 110
+ network 10.1.110.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.111
+ encapsulation dot1Q 111
+ ip address 10.1.111.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 111
+ network 10.1.111.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.112
+ encapsulation dot1Q 112
+ ip address 10.1.112.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 112
+ network 10.1.112.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.113
+ encapsulation dot1Q 113
+ ip address 10.1.113.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 113
+ network 10.1.113.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.114
+ encapsulation dot1Q 114
+ ip address 10.1.114.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 114
+ network 10.1.114.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.115
+ encapsulation dot1Q 115
+ ip address 10.1.115.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 115
+ network 10.1.115.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.116
+ encapsulation dot1Q 116
+ ip address 10.1.116.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 116
+ network 10.1.116.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.117
+ encapsulation dot1Q 117
+ ip address 10.1.117.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 117
+ network 10.1.117.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.118
+ encapsulation dot1Q 118
+ ip address 10.1.118.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 118
+ network 10.1.118.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.119
+ encapsulation dot1Q 119
+ ip address 10.1.119.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 119
+ network 10.1.119.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.120
+ encapsulation dot1Q 120
+ ip address 10.1.120.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 120
+ network 10.1.120.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.121
+ encapsulation dot1Q 121
+ ip address 10.1.121.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 121
+ network 10.1.121.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.122
+ encapsulation dot1Q 122
+ ip address 10.1.122.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 122
+ network 10.1.122.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.123
+ encapsulation dot1Q 123
+ ip address 10.1.123.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 123
+ network 10.1.123.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.124
+ encapsulation dot1Q 124
+ ip address 10.1.124.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 124
+ network 10.1.124.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.125
+ encapsulation dot1Q 125
+ ip address 10.1.125.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 125
+ network 10.1.125.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.126
+ encapsulation dot1Q 126
+ ip address 10.1.126.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 126
+ network 10.1.126.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.127
+ encapsulation dot1Q 127
+ ip address 10.1.127.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 127
+ network 10.1.127.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.128
+ encapsulation dot1Q 128
+ ip address 10.1.128.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 128
+ network 10.1.128.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.129
+ encapsulation dot1Q 129
+ ip address 10.1.129.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 129
+ network 10.1.129.0 0.0.0.255 area 0
+
+interface GigabitEthernet2.130
+ encapsulation dot1Q 130
+ ip address 10.1.130.2 255.255.255.0
+ ip ospf network point-to-point
+
+router ospf 130
+ network 10.1.130.0 0.0.0.255 area 0

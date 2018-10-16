@@ -1,0 +1,115 @@
+Content-Type: multipart/mixed; boundary="===============8815267485200512281=="
+MIME-Version: 1.0
+
+--===============8815267485200512281==
+Content-Type: text/cloud-config; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="cloud-config"
+
+#cloud-config
+vinitparam:
+ - otp : $vedge_token
+ - vbond : 11.11.11.252
+ - uuid : $vedge_uuid
+ - org : Cisco Sy1 - 19968
+
+--===============8815267485200512281==
+Content-Type: text/cloud-boothook; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment;
+ filename="config-6978c2a4-8f5e-4489-8500-80e8048f60ad.txt"
+
+#cloud-boothook
+ 
+
+system 
+personality vedge
+device-model vedge-cloud
+chassis-number $vedge_uuid
+ztp-status success
+config-template-name "vEdge-cloud-template"
+pseudo-confirm-commit 300
+!
+  system
+   personality             vedge
+   device-model            vedge-cloud
+   host-name               s$stud_numb3-vEdge
+   system-ip               10.1.61.2$stud_num
+   domain-id               1
+   site-id                 2$stud_num
+   no route-consistency-check
+   sp-organization-name    "Cisco Sy1 - 19968"
+   organization-name       "Cisco Sy1 - 19968"
+   vbond 11.11.11.252 port 12346
+   aaa
+    auth-order local radius tacacs
+    usergroup basic
+     task system read write
+     task interface read write
+    !
+    usergroup netadmin
+    !
+    usergroup operator
+     task system read
+     task interface read
+     task policy read
+     task routing read
+     task security read
+    !
+    user admin
+     password $6$siwKBQ==$wT2lUa9BSreDPI6gB8sl4E6PAJoVXgMbgv/whJ8F1C6sWdRazdxorYYTLrL6syiG6qnLABTnrE96HJiKF6QRq1
+    !
+   !
+   logging
+    disk
+     enable
+    !
+   !
+  !
+  omp
+   no shutdown
+   graceful-restart
+   advertise connected
+   advertise static
+  !
+  security
+   ipsec
+    authentication-type sha1-hmac ah-sha1-hmac
+   !
+  !
+  vpn 0
+ interface ge0/1
+  ip address 12.12.12.2$stud_num/24
+  ipv6 dhcp-client
+  tunnel-interface
+   encapsulation ipsec
+   color public-internet
+   allow-service all
+   no allow-service bgp
+   allow-service dhcp
+   allow-service dns
+   allow-service icmp
+   no allow-service sshd
+   no allow-service netconf
+   no allow-service ntp
+   no allow-service ospf
+   no allow-service stun
+  !
+  no shutdown
+ !
+ ip route 0.0.0.0/0 12.12.12.1
+!
+  vpn 512
+   name "Mgmt"
+   interface eth0
+    ip address 10.1.61.2$stud_num/23
+    no shutdown
+   !
+ ip route 0.0.0.0/0 10.1.60.1
+  !
+ !
+!
+
+--===============8815267485200512281==--

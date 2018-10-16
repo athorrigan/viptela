@@ -1,0 +1,29 @@
+hostname B2-CSR-1
+enable password C1sc023#
+username admin priv 15 password 0 C1sc023#
+ip domain-name sae.ciscolive.com
+
+interface GigabitEthernet1
+description Management
+ip address 10.1.61.141 255.255.254.0
+no shut
+exit
+
+interface GigabitEthernet2 
+description StudentB2-vEdge
+no shut
+exit
+
+interface GigabitEthernet3
+description B2-LAN
+no shut
+exit
+
+ip http secure-server
+ip route 0.0.0.0 0.0.0.0 10.1.60.1
+netconf ssh
+ip ssh version 2
+line vty 0 4
+login local
+transport input all
+exit
