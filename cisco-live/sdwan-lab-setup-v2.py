@@ -40,8 +40,8 @@ with open('./input-files/uuid-mapping-keyed.json') as uuid_mapping:
     uuid_list = json.loads(uuid_mapping.read())
 b2_vedge_uuid = uuid_list[b2_vedge_name]['vedge-uuid']
 b3_vedge_uuid = uuid_list[b3_vedge_name]['vedge-uuid']
-print (b2_vedge_name + (' (%s) will deploy on' % b2_vedge_uuid) + csp_ip)
-print (b3_vedge_name + (' (%s) will deploy on' % b3_vedge_uuid) + csp_ip)
+print (b2_vedge_name + (' (%s) will deploy on ' % b2_vedge_uuid) + csp_ip)
+print (b3_vedge_name + (' (%s) will deploy on ' % b3_vedge_uuid) + csp_ip)
 
 
 #Using UUID, request bootstraps for b2-vedge and b3-vedge
@@ -80,10 +80,12 @@ print b3_vedge_name + '-user_data files created'
 #Create vedge-bootstrap.iso for B2 and B3
 #Copy both vedge-bootstrap.iso files to WISP-NFS
 #b2-vedge-user_data
+print ('Creating bootstrap file for ' + b2_vedge_name)
 os.system('cp ./vedge-bootstraps/s%sb2-vedge-user_data.txt Viptela/openstack/latest/user_data' % stud_num)
 os.system('mkisofs -J -R -V config-2 -o ./vedge-bootstraps/s%sb2-vedge-bootstrap.iso Viptela/' % stud_num)
 os.system('sshpass -p \'C1sco123\' scp -o StrictHostKeyChecking=no ./vedge-bootstraps/s%sb2-vedge-bootstrap.iso root@10.1.60.251:/var/WISP-NFS/repository' % stud_num)
 #b3-vedge-user_data
+print ('Creating bootstrap file for ' + b3_vedge_name)
 os.system('cp ./vedge-bootstraps/s%sb3-vedge-user_data.txt Viptela/openstack/latest/user_data' % stud_num)
 os.system('mkisofs -J -R -V config-2 -o ./vedge-bootstraps/s%sb3-vedge-bootstrap.iso Viptela/' % stud_num)
 os.system('sshpass -p \'C1sco123\' scp -o StrictHostKeyChecking=no ./vedge-bootstraps/s%sb3-vedge-bootstrap.iso root@10.1.60.251:/var/WISP-NFS/repository' % stud_num)
@@ -96,11 +98,11 @@ request_url = '/api/running/services/'
 body = json.loads(open('./input-files/b2-vedge-csp-template.txt').read().replace("$stud_num", stud_num).replace("$csp_po", csp_po))
 r = requests.post('https://' + csp_ip + request_url, verify=False, auth=('admin','C1sc023#'), json=body, headers=headers)
 if r.status_code is 200:
-    print b2_vedge_name + ' is successfully deploying on ' + csp_ip
+    print (b2_vedge_name + ' is successfully deploying on ' + csp_ip)
 #b3-vedge
 headers = {'Content-Type': 'application/vnd.yang.data+json'}
 request_url = '/api/running/services/'
 body = json.loads(open('./input-files/b3-vedge-csp-template.txt').read().replace("$stud_num", stud_num).replace("$csp_po", csp_po))
 r = requests.post('https://' + csp_ip + request_url, verify=False, auth=('admin','C1sc023#'), json=body, headers=headers)    
 if r.status_code is 200:
-    print b3_vedge_name + ' is successfully deploying on ' + csp_ip
+    print (b3_vedge_name + ' is successfully deploying on ' + csp_ip)
