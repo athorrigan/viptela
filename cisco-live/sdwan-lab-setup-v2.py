@@ -37,8 +37,8 @@ with open('./input-files/uuid-mapping-keyed.json') as uuid_mapping:
     uuid_list = json.loads(uuid_mapping.read())
 b2_vedge_uuid = uuid_list[b2_vedge_name]['vedge-uuid']
 b3_vedge_uuid = uuid_list[b3_vedge_name]['vedge-uuid']
-print (b2_vedge_name + ' (%s) will deploy on' + csp_ip % b2_vedge_uuid)
-print (b3_vedge_name + ' (%s) will deploy on' + csp_ip % b3_vedge_uuid)
+print (b2_vedge_name + ' [%s] will deploy on' + csp_ip % b2_vedge_uuid)
+print (b3_vedge_name + ' [%s] will deploy on' + csp_ip % b3_vedge_uuid)
 
 
 #Using UUID, request bootstraps for b2-vedge and b3-vedge
