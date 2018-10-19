@@ -97,12 +97,12 @@ headers = {'Content-Type': 'application/vnd.yang.data+json'}
 request_url = '/api/running/services/'
 body = json.loads(open('./input-files/b2-vedge-csp-template.txt').read().replace("$stud_num", stud_num).replace("$csp_po", csp_po))
 r = requests.post('https://' + csp_ip + request_url, verify=False, auth=('admin','C1sc023#'), json=body, headers=headers)
-if r.status_code is 200:
+if r.status_code is 201:
     print (b2_vedge_name + ' is successfully deploying on ' + csp_ip)
 #b3-vedge
 headers = {'Content-Type': 'application/vnd.yang.data+json'}
 request_url = '/api/running/services/'
 body = json.loads(open('./input-files/b3-vedge-csp-template.txt').read().replace("$stud_num", stud_num).replace("$csp_po", csp_po))
 r = requests.post('https://' + csp_ip + request_url, verify=False, auth=('admin','C1sc023#'), json=body, headers=headers)    
-if r.status_code is 200:
+if r.status_code is 201:
     print (b3_vedge_name + ' is successfully deploying on ' + csp_ip)
