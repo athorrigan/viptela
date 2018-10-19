@@ -82,12 +82,12 @@ print b3_vedge_name + '-user_data files created'
 #b2-vedge-user_data
 print ('Creating bootstrap file for ' + b2_vedge_name)
 os.system('cp ./vedge-bootstraps/s%sb2-vedge-user_data.txt Viptela/openstack/latest/user_data' % stud_num)
-os.system('mkisofs -J -R -V config-2 -o ./vedge-bootstraps/s%sb2-vedge-bootstrap.iso Viptela/' % stud_num)
+os.system('mkisofs -J -R -V config-2 -o ./vedge-bootstraps/s%sb2-vedge-bootstrap.iso Viptela/ > /dev/null' % stud_num)
 os.system('sshpass -p \'C1sco123\' scp -o StrictHostKeyChecking=no ./vedge-bootstraps/s%sb2-vedge-bootstrap.iso root@10.1.60.251:/var/WISP-NFS/repository' % stud_num)
 #b3-vedge-user_data
 print ('Creating bootstrap file for ' + b3_vedge_name)
 os.system('cp ./vedge-bootstraps/s%sb3-vedge-user_data.txt Viptela/openstack/latest/user_data' % stud_num)
-os.system('mkisofs -J -R -V config-2 -o ./vedge-bootstraps/s%sb3-vedge-bootstrap.iso Viptela/' % stud_num)
+os.system('mkisofs -J -R -V config-2 -o ./vedge-bootstraps/s%sb3-vedge-bootstrap.iso Viptela/ > /dev/null' % stud_num)
 os.system('sshpass -p \'C1sco123\' scp -o StrictHostKeyChecking=no ./vedge-bootstraps/s%sb3-vedge-bootstrap.iso root@10.1.60.251:/var/WISP-NFS/repository' % stud_num)
 
 
