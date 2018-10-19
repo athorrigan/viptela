@@ -10,6 +10,9 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 #Connection Information
 vmanage_ip = '10.1.60.61:8443'
+request_url = '/j_security_check'
+sess = requests.session()
+r = sess.post('https://' + vmanage_ip + request_url, verify=False, auth=('admin','admin'))
 
 
 #Select the student and validate the input
